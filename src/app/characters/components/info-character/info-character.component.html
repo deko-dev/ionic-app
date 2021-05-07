@@ -1,0 +1,15 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="redirect()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Name Character</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center">
+    <img [src]="character_info.image">
+    <ion-card-title>{{ character_info.name }}</ion-card-title>
+ </ion-card>
+</ion-content>

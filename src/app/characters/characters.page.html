@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Characters</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Characters</ion-list-header>
+
+    <ion-item *ngFor="let character of characters" [routerLink]="[ 'character/', character.id ]">
+      <ion-avatar slot="start">
+        <img [src]="character.image">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ character.name }}</h2>
+        <h3>{{ character.species }}</h3>
+        <p>{{ character.created }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
